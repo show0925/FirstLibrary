@@ -1,0 +1,56 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'com.huawei.ohos.app'
+
+ohos {
+    compileSdkVersion 4
+    defaultConfig {
+        compatibleSdkVersion 4
+    }
+}
+	
+buildscript {
+    repositories {
+        maven {
+            url 'https://mirrors.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+		jcenter()
+    }
+    dependencies {
+        classpath 'com.huawei.ohos:hap:2.4.0.1'
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url 'https://mirrors.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            credentials {
+                username '08d62ad35c800f460f72c016246ce160_08d62ad43e0025821f6cc016f42eb9a5'
+                password 'vT6]Y-t55['
+            }
+            url 'https://devrepo.devcloud.cn-north-4.huaweicloud.com/07/nexus/content/repositories/08d62ad35c800f460f72c016246ce160_1_0/'
+        }
+        maven {
+            credentials {
+                username '08d62ad35c800f460f72c016246ce160_08d62ad43e0025821f6cc016f42eb9a5'
+                password 'vT6]Y-t55['
+            }
+            url 'https://devrepo.devcloud.cn-north-4.huaweicloud.com/07/nexus/content/repositories/08d62ad35c800f460f72c016246ce160_2_0/'
+        }
+		jcenter()
+    }
+}
